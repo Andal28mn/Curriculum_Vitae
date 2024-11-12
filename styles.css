@@ -1,0 +1,161 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9; /* Gris claro */
+    color: #333; /* Gris oscuro para texto */
+}
+
+/* Estilo del encabezado */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#nombre {
+    font-size: 2.5em;
+    color: #4A90E2; /* Azul */
+    font-weight: 600;
+}
+
+#foto_perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    border: 4px solid #f4f4f9;
+    margin-bottom: 20px;
+}
+
+#ocupacion {
+    font-size: 1.9em;
+    color: #333;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+/* Estilos para  la linea debajo de los titulos */
+#datos_personales,
+#estudios,
+#tecnologias,
+#proyectos,
+#video_presentacion,
+#referencias {
+    border-bottom: 2px solid #4A90E2;
+    padding-bottom: 10px;
+}
+
+
+/* Contenedor principal */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 0 auto;
+    max-width: 900px; /* Ancho máximo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las secciones */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #4A90E2; /* Azul */
+    margin-bottom: 10px;
+}
+
+/* Estilos para las filas y columnas's */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.column {
+    width: 48%; /* Ancho de las columnas */
+}
+
+/* Estilo para las listas */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los proyectos */
+#py_realizados div {
+    margin-bottom: 20px;
+}
+
+#py_realizados h3 {
+    font-size: 1.2em;
+}
+
+
+/* Estilos para el video*/
+#video iframe {
+    width: 100%;
+    border-radius: 8px;
+    height: auto; /* Hacer que la altura se ajuste automáticamente */
+    aspect-ratio: 16 / 9; /* Mantener una proporción adecuada para el video */
+}
+
+/* Estilos de transición para el efecto del scroll */
+.scroll-fade {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+}
+
+/* Medios para pantallas pequeñas */
+@media (max-width: 600px) {
+    #nombre {
+        font-size: 2em;
+    }
+
+    #foto_perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    /* En pantallas pequeñas las columnas se apilan */
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
